@@ -1,0 +1,45 @@
+/* Reel */
+.reel {
+  background-color: var(--section-bg);
+}
+.reel-frame {
+  position: relative;
+  margin-top: 80px;
+  border-radius: 20px;
+  border: 1px solid red;
+  animation: reel-frame-animated 2s linear infinite;
+}
+@keyframes reel-frame-animated {
+  0%,100% {
+    transform: translateY(0);
+  } 
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.reel-frame:hover {
+  opacity: 0.8;
+  animation-play-state: paused;
+}
+.reel-video {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 85px #fc00115d;
+  display: block;
+}
+.reel-frame .custom-title {
+  position: absolute;
+  top: 10px;
+  left: 57px;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}
+@media (max-width: 767px) {
+  .reel-frame .custom-title {
+    display: none;
+  }
+}
+/* Reel */

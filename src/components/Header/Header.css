@@ -1,0 +1,79 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: 20px 0;
+}
+header.scrolled {
+  background-color: var(--body-bg);
+  box-shadow: 0 0px 20px #fc001125;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container .logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+header .container .logo:hover {
+  color: var(--main-color);
+}
+header .container ul {
+  display: flex;
+  gap: 30px;
+}
+header .container ul li {
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+}
+header .container ul li::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: calc(100% + 5px);
+  border-radius: 5px;
+  background-color: var(--main-color);
+  width: 0;
+  height: 2px;
+  transition: 0.4s ease;
+}
+header .container ul li:hover::before {
+  width: calc(100% + 10px);
+}
+header .container ul li.active::before {
+  width: calc(100% + 10px);
+}
+header .container ul li.active,
+header .container ul li:hover {
+  font-weight: bold;
+  color: var(--main-color);
+}
+header .container .menu {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+header .container .menu:hover {
+  color: var(--main-color);
+}
+/* Header Responsive */
+@media (max-width: 991px) {
+  header .container ul {
+    background-color: var(--body-bg);
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    left: -100%;
+    top: calc(100% - 5px);
+    padding: 30px;
+    margin: 0;
+  }
+  header .container .menu {
+    display: block;
+  }
+}

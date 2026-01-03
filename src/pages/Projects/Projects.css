@@ -1,0 +1,58 @@
+/* Projects */
+.projects .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.projects .container .card {
+  background-color: var(--section-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.projects .container .card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 5px 30px #ff00114d;
+  opacity: 0.9;
+}
+.projects .container .card .card-body {
+  padding: 20px;
+}
+.projects .container .card .card-body .card-body-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #222;
+}
+.projects .container .card .card-body .card-body-head i {
+  font-size: 22px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+.projects .container .card .card-body .card-body-head i:hover {
+  color: var(--white-color);
+}
+.projects .container .card .card-body .card-body-text p {
+  line-height: var(--line-height);
+  color: #eee;
+}
+.projects .container .card:hover .card-body-head h4 {
+  color: var(--main-color);
+}
+.projects .container .card .card-foot {
+  border-top: 1px solid #222;
+  padding-top: 15px;
+  margin-top: 10px;
+}
+.projects .container .card .card-foot button {
+  padding: 9px 17px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .projects .container .card {
+    text-align: center;
+  }
+}
+/* Projects */

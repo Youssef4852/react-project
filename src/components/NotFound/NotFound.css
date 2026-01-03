@@ -1,0 +1,13 @@
+.NotFound {
+    min-height: calc(100vh - 330px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--section-bg);
+}
+.NotFound h1 {
+    font-size: 50px;
+}
+.NotFound h1 span {
+    color: var(--main-color);
+}

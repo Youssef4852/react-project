@@ -1,0 +1,138 @@
+/* Contact */
+.contact .container .forms {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact .container .info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 70px;
+}
+.contact .container .info-cards .info-card {
+  background-color: var(--section-bg);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+.contact .container .info-cards .info-card:hover {
+  background-color: #1f213a;
+}
+.contact .container .info-cards .info-card:hover i {
+  transform: scale(1.2);
+}
+.contact .container .info-cards .info-card:hover h4 {
+  color: var(--main-color);
+}
+.contact .container .info-cards .info-card i {
+  color: var(--main-color);
+  font-size: 50px;
+}
+.contact .container .info-cards .info-card h4 {
+  font-size: 20px;
+  margin: 15px;
+}
+.contact .container .info-cards .info-card p {
+  color: #ddd;
+}
+.contact .container form {
+  width: 60%;
+}
+/* Lets To Stylest */
+.contact .container .field-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.contact .container .input-field {
+  width: 100%;
+  position: relative;
+}
+.contact .container .input-field label {
+  display: block;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  font-weight: normal;
+  color: #ddd;
+  cursor: pointer;
+  background-color: var(--body-bg);
+  padding: 0 5px;
+}
+.contact .container .input-field input,
+.contact .container .input-field textarea {
+  width: 100%;
+  padding: 18px;
+  background-color: var(--body-bg);
+  border: 2px solid #202138;
+  color: var(--white-color);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.contact .container .input-field:has(input:valid) label,
+.contact .container .input-field:has(textarea:valid) label {
+  color: var(--main-color);
+}
+.contact .container .input-field input:hover,
+.contact .container .input-field textarea:hover,
+.contact .container .input-field input:focus,
+.contact .container .input-field textarea:focus {
+  border-color: #383a58;
+}
+.contact .container .input-field textarea {
+  resize: none;
+  height: 200px;
+}
+.contact .container form button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  opacity: 1;
+}
+.contact
+  .container
+  form:has(
+    .field-group .input-field input:invalid,
+    .input-field textarea:invalid
+  )
+  button {
+  background-color: transparent;
+  color: var(--main-color);
+  opacity: 0.8;
+  cursor: default;
+}
+.contact .container .map {
+  position: relative;
+  width: 35%;
+  z-index: 1;
+  border: 1px solid red;
+  padding: 0;
+  border-radius: 10px;
+}
+.contact .container .map .map-frame:hover {
+  opacity: 0.9;
+}
+.contact .container .map .map-frame:focus {
+  opacity: 1;
+}
+.contact .container .map .map-frame {
+  box-shadow: 0 0 85px #fc00115d;
+  border-radius: 10px;
+  width: 100%;
+  display: block;
+}
+@media (max-width: 991px) {
+  .contact .forms {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .contact .container form,
+  .contact .container .map {
+    width: 100%;
+  }
+}
+/* Contact */

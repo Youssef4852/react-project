@@ -1,0 +1,71 @@
+/* Testimonials */
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.testimonials .container .card {
+  position: relative;
+  background-color: var(--section-bg);
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+.testimonials .container .card::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #1a1a33;
+  z-index: -1;
+}
+.testimonials .container .card:hover::before {
+  left: 100%;
+  transition: 0.4s ease;
+}
+.testimonials .container .card:hover {
+  transform: translateY(10px);
+  box-shadow: 0 -5px 25px #ff001134;
+}
+.testimonials .container .card .stars-icon {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+}
+.testimonials .container .card .stars-icon i {
+  font-size: 18px;
+}
+.testimonials .container .card .stars-icon i.fill {
+  color: var(--main-color);
+}
+.testimonials .container .card .text p {
+  line-height: var(--line-height);
+}
+.testimonials .container .card .text .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.testimonials .container .card .text .info i {
+  color: var(--main-color);
+  cursor: pointer;
+}
+.testimonials .container .card .text .info i:hover {
+  color: var(--white-color);
+}
+.testimonials .container .card .foot {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #333;
+}
+.testimonials .container .card .btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* Testimonials */

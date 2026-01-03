@@ -1,0 +1,24 @@
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 32px;
+  background-color: var(--main-color);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transform: scale(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+}
+.scroll-top:hover {
+  background-color: #ee3642;
+}
+
+.scroll-top.active {
+  transform: scale(1);
+  right: 30px;
+}
