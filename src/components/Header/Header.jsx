@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function Header() {
   const [activeLink, setActiveLink] = useState("home");
   const [scroll, setScroll] = useState(false)
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
     const handleScrollHeader = () => setScroll(window.scrollY > 70)
@@ -30,7 +31,7 @@ function Header() {
           <Link to="/" className="logo">
             Youssef
           </Link>
-          <ul>
+          <ul style={{left: show ? '0' : "100%"}}>
             {links.map((link) => {
               return (
                 <li
@@ -45,7 +46,7 @@ function Header() {
               );
             })}
           </ul>
-          <i className="bx bx-menu menu"></i>
+          <i className="bx bx-menu menu" onClick={() => setShow(!show)}></i>
         </div>
       </header>
     </>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Reel from "./pages/Reel/Reel";
 import About from "./pages/About/About";
@@ -8,8 +7,6 @@ import Projects from "./pages/Projects/Projects";
 import Testimonials from "./pages/Testimonials/Testimonials";
 import Faq from "./pages/FAQ/FAQ";
 import Contact from "./pages/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import ScrollTop from "./components/ScrollTop/ScrollTop";
 import { Route, Router, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import NotFound from "./components/NotFound/NotFound";
@@ -18,9 +15,14 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="*" element={<Layout>
-          <NotFound />
-        </Layout>} />
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <NotFound />
+            </Layout>
+          }
+        />
         <Route
           path="/"
           element={
