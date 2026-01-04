@@ -5,7 +5,7 @@ import Reel from "./pages/Reel/Reel";
 import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Testimonials from "./pages/Testimonials/Testimonials";
-import Faq from "./pages/FAQ/FAQ";
+import Faq from "./pages/Faq/Faq";
 import Contact from "./pages/Contact/Contact";
 import { Route, Router, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
