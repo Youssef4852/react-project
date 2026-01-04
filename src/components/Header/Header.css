@@ -48,7 +48,7 @@ header .container ul li:hover::before {
 header .container ul li.active::before {
   width: calc(100% + 10px);
 }
-header .container ul li.active,
+header .container ul li.active a,
 header .container ul li:hover {
   font-weight: bold;
   color: var(--main-color);
