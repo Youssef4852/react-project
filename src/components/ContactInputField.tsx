@@ -13,6 +13,7 @@ interface ContactInputFieldProps {
   value: string | null;
   setValue: (id: keyof FocusState, value: string) => void;
   type: string;
+  name: string
 }
 
 function ContactInputField({
@@ -21,6 +22,7 @@ function ContactInputField({
   value,
   setValue,
   type,
+  name
 }: ContactInputFieldProps) {
   const [focus, setFocus] = useState<boolean | null>(null);
 
@@ -33,6 +35,7 @@ function ContactInputField({
         <input
           type={type}
           value={value || ""}
+          name={name}
           onChange={(e) => {
             setValue(id, e.target.value);
           }}

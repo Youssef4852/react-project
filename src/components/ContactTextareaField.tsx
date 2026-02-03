@@ -9,9 +9,10 @@ interface ContactTextareaFieldProps {
   label: string;
   value: string | null;
   setValue: (id: keyof FocusState, value: string) => void;
+  name: string
 }
 
-function ContactTextareaField({ id, label, value, setValue }: ContactTextareaFieldProps) {
+function ContactTextareaField({ id, label, value, name, setValue }: ContactTextareaFieldProps) {
   let [focus, setFocus] = useState<FocusState>({
     message: null
   });
@@ -25,6 +26,7 @@ function ContactTextareaField({ id, label, value, setValue }: ContactTextareaFie
         <textarea
           id={id}
           value={value || ''}
+          name={name}
           onChange={(e) => {
             setValue(id, e.target.value);
           }}

@@ -18,7 +18,7 @@ function ScrollTop() {
         className={`scroll-top ${show ? "active" : ""}` }
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
-        <i class="bx bx-up-arrow-alt"></i>
+        <i className="bx bx-up-arrow-alt"></i>
       </div>
     </>
   );

@@ -10,6 +10,7 @@ import Contact from "./pages/Contact/Contact.js";
 import { Route, Router, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout.js";
 import NotFound from "./components/NotFound/NotFound.js";
+import ScrollTop from "./components/ScrollTop/ScrollTop.js";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               <Testimonials />
               <Faq />
               <Contact />
+              <ScrollTop />
             </Layout>
           }
         />
