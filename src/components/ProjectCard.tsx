@@ -1,6 +1,13 @@
 import React from "react";
+import Button from "./Button.js";
 
-function ProjectCard({ src, title }) {
+interface ProjectCardProps {
+  src: string;
+  title: string;
+  icon: string;
+}
+
+function ProjectCard({src, title, icon}: ProjectCardProps) {
   return (
     <div className="card">
       <div className="card-head">
@@ -8,7 +15,7 @@ function ProjectCard({ src, title }) {
         <div className="card-body">
           <div className="card-body-head">
             <h4>{title}</h4>
-            <i className="bx bx-code-alt"></i>
+            <i className={`bx bx-${icon}`}></i>
           </div>
           <div className="card-body-text">
             <p>
@@ -17,7 +24,7 @@ function ProjectCard({ src, title }) {
             </p>
           </div>
           <div className="card-foot">
-            <button className="btn fill">See More</button>
+            <Button text="See More" type="fill" />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Faq.css";
-import FaqItem from "../../components/FaqItem";
+import FaqItem from "../../components/FaqItem.js";
 
 function Faq() {
   return (

@@ -5,13 +5,13 @@ function Footer() {
   return (
     <>
       <footer>
-        <div class="container">
-          <div class="box">
+        <div className="container">
+          <div className="box">
             <h2>Youssef</h2>
-            <div class="icons">
-              <i class="bx bxl-github"></i>
-              <i class="bx bxl-linkedin-square"></i>
-              <i class="bx bxl-instagram-alt"></i>
+            <div className="icons">
+              <i className="bx bxl-github"></i>
+              <i className="bx bxl-linkedin-square"></i>
+              <i className="bx bxl-instagram-alt"></i>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
@@ -19,8 +19,8 @@ function Footer() {
             </p>
           </div>
 
-          <div class="list-items">
-            <div class="box">
+          <div className="list-items">
+            <div className="box">
               <h3>Support</h3>
               <ul>
                 <li>Contact With Me</li>
@@ -30,7 +30,7 @@ function Footer() {
               </ul>
             </div>
 
-            <div class="box">
+            <div className="box">
               <h3>Sections</h3>
               <ul>
                 <li>Reel</li>
@@ -40,7 +40,7 @@ function Footer() {
               </ul>
             </div>
 
-            <div class="box">
+            <div className="box">
               <h3>Thire Our</h3>
               <ul>
                 <li>Terms And Conditions</li>
@@ -52,7 +52,7 @@ function Footer() {
           </div>
         </div>
 
-        <p class="footer-text">
+        <p className="footer-text">
           &copy; <b>Youssef</b> <span></span> - All Rights Reserved.
         </p>
       </footer>

@@ -3,6 +3,13 @@ import './About.css'
 import HomeImg from '../../assets/home.jpg'
 
 function About() {
+  const socialIcons = [
+    {name: 'github', id: 1},
+    {name: 'linkedin-square', id: 2},
+    {name: 'instagram-alt', id: 3},
+    {name: 'youtube', id: 4},
+    {name: 'facebook-square', id: 5},
+  ]
   return (
     <>
       <section className="about section-bg" id="about">
@@ -26,11 +33,9 @@ function About() {
               omnis optio tempore.
             </p>
             <div className="social">
-              <i className="bx bxl-github"></i>
-              <i className="bx bxl-linkedin-square"></i>
-              <i className="bx bxl-instagram-alt"></i>
-              <i className="bx bxl-youtube"></i>
-              <i className="bx bxl-facebook-square"></i>
+              {socialIcons.map(icon => {
+                return <i key={icon.id} className={`bx bxl-${icon.name}`}></i>
+              })}
             </div>
             <button className="btn fill">More Us</button>
           </div>

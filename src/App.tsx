@@ -1,15 +1,15 @@
 import { useState } from "react";
 import "./App.css";
-import Home from "./pages/Home/Home";
-import Reel from "./pages/Reel/Reel";
-import About from "./pages/About/About";
-import Projects from "./pages/Projects/Projects";
-import Testimonials from "./pages/Testimonials/Testimonials";
-import Faq from "./pages/Faq/Faq";
-import Contact from "./pages/Contact/Contact";
+import Home from "./pages/Home/Home.js";
+import Reel from "./pages/Reel/Reel.js";
+import About from "./pages/About/About.js";
+import Projects from "./pages/Projects/Projects.js";
+import Testimonials from "./pages/Testimonials/Testimonials.js";
+import Faq from "./pages/Faq/Faq.js";
+import Contact from "./pages/Contact/Contact.js";
 import { Route, Router, Routes } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
-import NotFound from "./components/NotFound/NotFound";
+import Layout from "./components/Layout/Layout.js";
+import NotFound from "./components/NotFound/NotFound.js";
 
 function App() {
   return (
