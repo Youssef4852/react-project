@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Contact.css";
 import Button from "../../components/Button";
 import ContactInputField from "../../components/ContactInputField";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [inputs, setInputs] = useState({
@@ -18,6 +19,25 @@ function Contact() {
     { icon: "map", title: "Address", text: "+15 New York, Alnahr Bridge." },
     { icon: "globe", title: "Personal Website", text: "youssef.com" },
   ];
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_lxaxark", "template_9z1k9sd", form.current, {
+        publicKey: "RLg3zE_X80Z_srgaO",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        },
+      );
+  };
 
   return (
     <>
@@ -38,13 +58,13 @@ function Contact() {
             })}
           </div>
           <div className="forms">
-            <form>
+            <form ref={form} onSubmit={() => sendEmail()}>
               <div className="field-group">
                 <ContactInputField
                   id="firstName"
                   label="First Name"
                   value={inputs.firstName}
-                  name="First Name"
+                  name="first_name"
                   onChange={(e) =>
                     setInputs({ ...inputs, firstName: e.target.value })
                   }
@@ -53,7 +73,7 @@ function Contact() {
                   id="lastName"
                   label="Last Name"
                   value={inputs.lastName}
-                  name="Last Name"
+                  name="last_name"
                   onChange={(e) =>
                     setInputs({ ...inputs, lastName: e.target.value })
                   }
@@ -64,7 +84,7 @@ function Contact() {
                   id="EmailAddress"
                   label="Email Address"
                   value={inputs.emailAddress}
-                  name="Email Address"
+                  name="email_address"
                   onChange={(e) =>
                     setInputs({ ...inputs, emailAddress: e.target.value })
                   }
@@ -73,7 +93,7 @@ function Contact() {
                   id="Subject"
                   label="Subject"
                   value={inputs.subject}
-                  name="Subject"
+                  name="subject"
                   onChange={(e) =>
                     setInputs({ ...inputs, subject: e.target.value })
                   }
@@ -84,7 +104,7 @@ function Contact() {
                   id="Message"
                   label="Message"
                   value={inputs.message}
-                  name="Message"
+                  name="message"
                   onChange={(e) =>
                     setInputs({ ...inputs, message: e.target.value })
                   }
