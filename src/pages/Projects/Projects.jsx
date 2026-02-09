@@ -16,12 +16,12 @@ function Projects() {
           Lets Visit Our Client <span>Projects</span>
         </h2>
         <div className="container">
-          <ProjectCard src={ProjectImg1} title="Artificial Intelligence"/>
-          <ProjectCard src={ProjectImg2} title="Data Analysis"/>
-          <ProjectCard src={ProjectImg3} title="Back End Development"/>
-          <ProjectCard src={ProjectImg4} title="Front End Development"/>
-          <ProjectCard src={ProjectImg5} title="Graphic Designer"/>
-          <ProjectCard src={ProjectImg6} title="Ui Ux Designer"/>
+          <ProjectCard src={ProjectImg1} title="Artificial Intelligence" icon='brain'/>
+          <ProjectCard src={ProjectImg2} title="Data Analysis" icon='bar-chart-alt-2'/>
+          <ProjectCard src={ProjectImg3} title="Back End Development" icon='server'/>
+          <ProjectCard src={ProjectImg4} title="Front End Development" icon='code-alt'/>
+          <ProjectCard src={ProjectImg5} title="Graphic Designer" icon='palette'/>
+          <ProjectCard src={ProjectImg6} title="Ui Ux Designer" icon='layout'/>
         </div>
       </section>
     </>

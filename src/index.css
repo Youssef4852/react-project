@@ -99,3 +99,20 @@ section:not(.home) {
   color: var(--main-color);
   background-color: transparent;
 }
+.socialIcon {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  width: 38px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  font-size: 22px;
+  cursor: pointer;
+  border: 2px solid var(--main-color);
+}
+.socialIcon:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}

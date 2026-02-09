@@ -1,8 +1,18 @@
-import React from 'react'
-import './About.css'
-import HomeImg from '../../assets/home.jpg'
+import React from "react";
+import "./About.css";
+import HomeImg from "../../assets/home.jpg";
+import Button from "../../components/Button";
+import SocialIcon from "../../components/SocialIcon";
 
 function About() {
+  const socialIcons = [
+    {icon: "github"},
+    {icon: "linkedin-square"},
+    {icon: "instagram-alt"},
+    {icon: "youtube"},
+    {icon: "facebook-square"},
+  ];
+
   return (
     <>
       <section className="about section-bg" id="about">
@@ -26,18 +36,16 @@ function About() {
               omnis optio tempore.
             </p>
             <div className="social">
-              <i className="bx bxl-github"></i>
-              <i className="bx bxl-linkedin-square"></i>
-              <i className="bx bxl-instagram-alt"></i>
-              <i className="bx bxl-youtube"></i>
-              <i className="bx bxl-facebook-square"></i>
+              {socialIcons.map(icon => {
+                return <SocialIcon key={icon.icon} icon={icon.icon} />
+              })}
             </div>
-            <button className="btn fill">More Us</button>
+            <Button text="More Us" fill={true} />
           </div>
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default About
+export default About;

@@ -23,16 +23,6 @@ footer .container .box .icons {
   gap: 15px;
   margin: 15px 0;
 }
-footer .container .box .icons i {
-  cursor: pointer;
-  background-color: #1f1f36;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-size: 20px;
-}
-footer .container .box .icons i:hover {
-  color: var(--main-color);
-}
 footer .container .list-items {
   display: flex;
   justify-content: space-between;
