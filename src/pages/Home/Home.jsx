@@ -1,7 +1,13 @@
 import React from "react";
+import Button from '../../components/Button'
 import "./Home.css";
 
 function Home() {
+  const socials = [
+    {icon: 'linkedin-square'},
+    {icon: 'instagram-alt'},
+    {icon: 'facebook-square'},
+  ]
   return (
     <>
       <section className="home" id="home">
@@ -16,15 +22,15 @@ function Home() {
               Asperiores vitae unde quia, tempora minima sit.
             </p>
             <div className="btns">
-              <button className="btn fill">Log in</button>
-              <button className="btn trns">Sign Up</button>
+              <Button text="Login" fill={true}/>
+              <Button text="Sign up" fill={false}/>
             </div>
           </div>
         </div>
         <div className="socials">
-          <i className="bx bxl-linkedin-square"></i>
-          <i className="bx bxl-instagram-alt"></i>
-          <i className="bx bxl-facebook-square"></i>
+          {socials.map(({icon}) => {
+            return <i className={`bx bxl-${icon}`}></i>
+          })}
         </div>
       </section>
     </>
