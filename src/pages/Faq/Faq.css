@@ -16,6 +16,12 @@
   cursor: pointer;
   overflow: hidden;
 }
+.question.open .question-text {
+  height: fit-content;
+  opacity: 1;
+  margin-top: 20px;
+  padding-top: 20px;
+}
 .question:hover {
   background-color: #262642;
 }
@@ -36,12 +42,9 @@
   width: 100%;
   border-top: 1px solid #555;
   color: #fff;
-  transition: all 0.3s, opacity 0s;
-}
-.question .question-text.showed {
-  left: 0;
-  opacity: 1;
-  position: relative;
+  opacity: 0;
+  height: 0;
+  transition: .3s;
 }
 .question .question-text p {
   line-height: var(--line-height);
