@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Faq.css";
 
 function Faq() {
-  const [openIndex, setOpenIndex] = useState(0)
+  const [openIndex, setOpenIndex] = useState(0);
   const faqItems = [
     {
       title: "How It Work This Application In Broswer?",
@@ -30,14 +30,26 @@ function Faq() {
         <div className="container">
           {faqItems.map((faq, index) => {
             return (
-              <div key={faq.title} className={`question ${openIndex === index ? "open" : ''}`} onClick={() => setOpenIndex(index)}>
+              <div
+                key={faq.title}
+                className={`question ${openIndex === index ? "open" : ""}`}
+                onClick={() => {
+                  setOpenIndex(index);
+
+                  if (index === openIndex) {
+                    setOpenIndex(null)
+                  }
+                }}
+              >
                 <h3>{faq.title}</h3>
-                <i className={`bx bx-${openIndex === index ? 'minus' : 'plus'}`}></i>
+                <i
+                  className={`bx bx-${openIndex === index ? "minus" : "plus"}`}
+                ></i>
                 <div className="question-text">
                   <p>{faq.text}</p>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </section>
